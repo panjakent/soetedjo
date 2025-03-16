@@ -1,4 +1,5 @@
 import { Icon } from '@iconify/react'
+import Image from 'next/image'
 
 export default function Home() {
   const LIST_MENU = [
@@ -47,10 +48,11 @@ export default function Home() {
     <div className="h-full max-w-lg mx-auto font-AveriaSerifLibre">
       <header className="fixed top-0 inset-x-0 max-w-screen-lg mx-auto px-0 bg-white/0 backdrop-blur-md">
         <div className="flex justify-center items-center shadow-[10px_0px_0px_var(--background),-10px_0px_0px_var(--background),0px_4px_10px_rgba(0,0,0,0.2)] py-5">
-          <img
-            src="assets/favpng_vector-graphics-clip-art-silhouette-cigarette-smoking-man-free-content 2.png"
+          <Image
+            src="/assets/favpng_vector-graphics-clip-art-silhouette-cigarette-smoking-man-free-content 2.png"
             alt="Logo"
-            className="h-16"
+            width={64}
+            height={64}
           />
           <h1 className="ml-3 text-[42px] text-textColor leading-[0.8]">
             Soetedjo <br /> Oetojo
