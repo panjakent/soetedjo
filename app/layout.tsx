@@ -26,8 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${averiaSerifLibre.variable}  antialiased`}>
-        <header className={`${amiri.variable}  antialiased`}></header>
+      <body
+        className={`${averiaSerifLibre.variable} ${amiri.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
