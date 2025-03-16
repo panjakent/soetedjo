@@ -3,14 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --card-radius: 5px;
+}
+
+:root {
+  --background: #F4EEE1;
   --foreground: #171717;
+  --primary: #8D6900;
+  --text-color: #5B5B5B;
+  --border-color: #A1A1A1;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #8D6900;
+    --text-color: #5B5B5B;
+    --border-color: #A1A1A1;
   }
 }
 
@@ -18,4 +28,9 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
 }
