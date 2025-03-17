@@ -16,11 +16,8 @@ export default function WelcomeMessage() {
   const pageName = pageNames[pathname] || 'Beranda'
 
   return (
-    <section
-      id="welkam"
-      className="px-3 h-full max-w-lg mx-auto font-AveriaSerifLibre"
-    >
-      <div className="card px-5 py-4 text-center italic text-2xl font-bold">
+    <section id="welkam" className="px-3 h-full max-w-lg mx-auto">
+      <div className="card py-[10px] text-center italic text-[20px] font-bold">
         <p>
           Selamat datang di{' '}
           <span className="text-primary not-italic underline decoration-1 underline-offset-4">

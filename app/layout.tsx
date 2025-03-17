@@ -34,7 +34,7 @@ export default function RootLayout({
         className={`${averiaSerifLibre.variable} ${amiri.variable} antialiased bg-background`}
       >
         <Header />
-        <main className="pt-[100px] pb-[150px]">
+        <main className="pt-[98px] pb-[150px]">
           <WelcomeMessage />
           {children}
         </main>

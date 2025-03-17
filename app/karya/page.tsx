@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="h-full max-w-lg mx-auto font-AveriaSerifLibre">
+    <div className="h-full max-w-lg mx-auto">
       <main>
         {/*tessss*/}
         <section id="quote" className="px-3 mt-3">

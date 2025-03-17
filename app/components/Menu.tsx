@@ -19,10 +19,10 @@ export default function Menu() {
         <Link
           key={menu.text}
           href={menu.href}
-          className="card py-4 shadow-[inset_0_0_10px_rgba(0,0,0,0.20)] transition duration-150 ease-in-out hover:shadow-[inset_0_0_18px_rgba(0,0,0,0.20)] flex gap-3 justify-center items-center"
+          className="card py-3 shadow-[inset_0_0_10px_rgba(0,0,0,0.20)] transition duration-150 ease-in-out hover:shadow-[inset_0_0_18px_rgba(0,0,0,0.20)] flex gap-3 justify-center items-center"
         >
-          <Icon icon={menu.icon} className="text-primary text-4xl" />
-          <span className="text-[22px] font-bold">{menu.text}</span>
+          <Icon icon={menu.icon} className="text-primary text-[28px]" />
+          <span className="text-[18px] font-bold">{menu.text}</span>
         </Link>
       ))}
     </nav>

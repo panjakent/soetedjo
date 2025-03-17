@@ -5,10 +5,11 @@
 :root {
   --card-radius: 5px;
   --background: #ffffff;
-  --foreground: rgb(60, 60, 60);
-  --primary: #6c4204;
+  --foreground: rgb(34, 34, 34);
+  --primary: #633800;
   --text-color: #f30000;
-  --border-color: #AFAFAF;
+  --border-color: #9c9c9c;
+  /*--border-color: #AFAFAF;*/
 }
 
 /*@media (prefers-color-scheme: dark) {*/
@@ -30,7 +31,14 @@ header {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-AveriaSerifLibre
+  /*font-family: ;*/
+}
+
+footer {
+  color: var(--foreground);
+  background: var(--background);
+  /*font-family: "Averia Serif Libre", serif;*/
 }
 
 html, body {
