@@ -7,11 +7,11 @@ export default function Home() {
         <section id="quote" className="px-3 mt-3">
           <div className="card px-8 py-6 text-center italic text-[16px]">
             <p>
-              "Setiap kenangan adalah cerita, setiap foto adalah jejak
+              &quot;Setiap kenangan adalah cerita, setiap foto adalah jejak
               perjalanan, dan setiap kisah yang terukir membentuk bagian dari
-              perjalanan kami."
+              perjalanan kami.&quot;
             </p>
-            <p className="mt-4">
+            <p className="mt-4 not-italic">
               Ingin tahu lebih dekat? Pilih menu di bawah dan temukan kisah di
               balik jejak keluarga Soetedjo Oetojo.
             </p>
