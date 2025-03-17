@@ -2,9 +2,9 @@
 
 import { Icon } from '@iconify/react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation' // ✅ Import usePathname
+import { usePathname } from 'next/navigation'
 
-const LIST_MENU_FOOTER = [
+const FOOTER_MENU = [
   { icon: 'ic:round-home', text: 'Beranda', href: '/' },
   { icon: 'ic:baseline-menu-book', text: 'Sejarah', href: '/sejarah' },
   { icon: 'ic:round-emoji-events', text: 'Karya', href: '/karya' },
@@ -16,34 +16,19 @@ export default function Footer() {
   const pathname = usePathname()
 
   return (
-    <footer className="fixed bottom-0 inset-x-0 max-w-screen-lg mx-auto px-0">
-      <nav className="px-3 grid grid-cols-5 bg-primary">
-        {LIST_MENU_FOOTER.map((menu) => {
+    <footer className="px-4 fixed bottom-0 inset-x-0 border-t border-borderColor bg-white/80 backdrop-blur-md z-10">
+      <nav className="container mx-auto grid grid-cols-5">
+        {FOOTER_MENU.map((menu) => {
           const isActive = pathname === menu.href
 
           return (
             <Link
               key={menu.text}
               href={menu.href}
-              className={`h-[75px] flex flex-col justify-center items-center transition duration-150 ease-in-out ${
-                isActive ? 'bg-background' : 'hover:bg-background group'
-              }`}
+              className={`footer-menu-item pb-2 ${isActive ? 'active' : ''}`}
             >
-              <Icon
-                icon={menu.icon}
-                className={`text-[24px] transition duration-150 ease-in-out ${
-                  isActive
-                    ? 'text-primary'
-                    : 'text-background group-hover:text-primary'
-                }`}
-              />
-              <span
-                className={`mt-1 text-[12px] pb-2 transition duration-150 ease-in-out ${
-                  isActive ? '' : 'text-background group-hover:text-foreground'
-                }`}
-              >
-                {menu.text}
-              </span>
+              <Icon icon={menu.icon} className="icon" />
+              <span className="text">{menu.text}</span>
             </Link>
           )
         })}

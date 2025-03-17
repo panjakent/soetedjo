@@ -2,29 +2,28 @@
 
 import { usePathname } from 'next/navigation'
 
+const pageNames: Record<string, string> = {
+  '/': 'Beranda',
+  '/sejarah': 'Sejarah',
+  '/karya': 'Karya',
+  '/galeri': 'Galeri',
+  '/acara': 'Acara',
+}
+
 export default function WelcomeMessage() {
   const pathname = usePathname()
-
-  const pageNames: Record<string, string> = {
-    '/': 'Beranda',
-    '/sejarah': 'Sejarah',
-    '/karya': 'karya',
-    '/galeri': 'Galeri',
-    '/acara': 'Acara',
-  }
-
   const pageName = pageNames[pathname] || 'Beranda'
 
   return (
-    <section id="welkam" className="px-3 h-full max-w-lg mx-auto">
-      <div className="card py-[10px] text-center italic text-[20px] font-bold">
-        <p>
+    <section className="container px-4">
+      <div className="card py-3 text-center">
+        <p className="text-[20px] font-bold">
           Selamat datang di{' '}
-          <span className="text-primary not-italic underline decoration-1 underline-offset-4">
+          <span className="text-primary underline decoration-1 underline-offset-[3px]">
             {pageName}
           </span>{' '}
           <br />
-          <span>Keluarga Soetedjo Oetojo</span>!
+          <span className="italic">Keluarga Soetedjo Oetojo</span>!
         </p>
       </div>
     </section>

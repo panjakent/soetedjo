@@ -1,20 +1,71 @@
-export default function Page() {
+export default function Karya() {
   return (
-    <div className="h-full max-w-lg mx-auto">
-      <main>
-        {/*tessss*/}
-        <section id="quote" className="px-3 mt-3">
-          <div className="card text-left px-6 py-6">
-            <h1 className="text-2xl font-bold pb-[15px]">1. Sejarah</h1>
-            <p>
-              Setiap kenangan adalah cerita, setiap foto adalah jejak
-              perjalanan, dan setiap kisah yang terukir membentuk bagian dari
-              perjalanan kami.
-            </p>
-          </div>
-        </section>{' '}
-        {/*tessss*/}
-      </main>
+    <div className="container">
+      <section id="quote" className="px-4 mt-2">
+        <div className="card px-8 py-6 text-center italic text-[16px]">
+          <p>
+            &quot;Setiap kenangan adalah cerita, setiap foto adalah jejak
+            perjalanan, dan setiap kisah yang terukir membentuk bagian dari
+            perjalanan kami.&quot;
+          </p>
+          <p className="mt-4 not-italic">
+            Ingin tahu lebih dekat? Pilih menu di bawah dan temukan kisah di
+            balik jejak keluarga Soetedjo Oetojo.
+          </p>
+        </div>
+      </section>
+      <section id="quote" className="px-4 mt-2">
+        <div className="card px-8 py-6 text-center italic text-[16px]">
+          <p>
+            &quot;Setiap kenangan adalah cerita, setiap foto adalah jejak
+            perjalanan, dan setiap kisah yang terukir membentuk bagian dari
+            perjalanan kami.&quot;
+          </p>
+          <p className="mt-4 not-italic">
+            Ingin tahu lebih dekat? Pilih menu di bawah dan temukan kisah di
+            balik jejak keluarga Soetedjo Oetojo.
+          </p>
+        </div>
+      </section>
+      <section id="quote" className="px-4 mt-2">
+        <div className="card px-8 py-6 text-center italic text-[16px]">
+          <p>
+            &quot;Setiap kenangan adalah cerita, setiap foto adalah jejak
+            perjalanan, dan setiap kisah yang terukir membentuk bagian dari
+            perjalanan kami.&quot;
+          </p>
+          <p className="mt-4 not-italic">
+            Ingin tahu lebih dekat? Pilih menu di bawah dan temukan kisah di
+            balik jejak keluarga Soetedjo Oetojo.
+          </p>
+        </div>
+      </section>
+      <section id="quote" className="px-4 mt-2">
+        <div className="card px-8 py-6 text-center italic text-[16px]">
+          <p>
+            &quot;Setiap kenangan adalah cerita, setiap foto adalah jejak
+            perjalanan, dan setiap kisah yang terukir membentuk bagian dari
+            perjalanan kami.&quot;
+          </p>
+          <p className="mt-4 not-italic">
+            Ingin tahu lebih dekat? Pilih menu di bawah dan temukan kisah di
+            balik jejak keluarga Soetedjo Oetojo.
+          </p>
+        </div>
+      </section>
+      <section id="quote" className="px-4 mt-2">
+        <div className="card px-8 py-6 text-center italic text-[16px]">
+          <p>
+            &quot;Setiap kenangan adalah cerita, setiap foto adalah jejak
+            perjalanan, dan setiap kisah yang terukir membentuk bagian dari
+            perjalanan kami.&quot;
+          </p>
+          <p className="mt-4 not-italic">
+            Ingin tahu lebih dekat? Pilih menu di bawah dan temukan kisah di
+            balik jejak keluarga Soetedjo Oetojo.
+          </p>
+        </div>
+      </section>
     </div>
   )
 }
