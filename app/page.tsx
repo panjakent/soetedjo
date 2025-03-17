@@ -51,16 +51,17 @@ export default function Home() {
           <Image
             src="/assets/favpng_vector-graphics-clip-art-silhouette-cigarette-smoking-man-free-content 2.png"
             alt="Logo"
-            width={60}
-            height={60}
+            width={52}
+            height={52}
+            style={{ width: '52px', height: '52px' }}
           />
-          <h1 className="ml-3 text-[40px] text-textColor leading-[0.8]">
+          <h1 className="ml-2 text-[38px] text-textColor leading-[0.8]">
             Soetedjo <br /> Oetojo
           </h1>
         </div>
       </header>
 
-      <main className="pt-[93px] pb-[135px]">
+      <main className="pt-[90px] pb-[135px]">
         {/*  */}
         <section id="welkam" className="px-3 mt-3">
           <div className="text-2xl font-bold italic text-center text-textColor border-[0.5px] border-borderColor rounded-[var(--card-radius)] px-5 py-4">
@@ -109,7 +110,6 @@ export default function Home() {
           })}
         </nav>
       </main>
-
       {/*<footer className="mt-16 px-8">*/}
       <footer className="fixed bottom-0 inset-x-0 max-w-screen-lg mx-auto px-0">
         <nav className="px-4 grid grid-cols-5 bg-primary">
