@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import { Averia_Serif_Libre, Amiri } from 'next/font/google'
 import './globals.css'
 
+import Header from '@/app/components/Header'
+import Footer from '@/app/components/Footer'
+import WelcomeMessage from '@/app/components/WelcomeMessage'
+
 const averiaSerifLibre = Averia_Serif_Libre({
   variable: '--font-averia-serif-libre',
   subsets: ['latin'],
@@ -27,9 +31,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${averiaSerifLibre.variable} ${amiri.variable} antialiased`}
+        className={`${averiaSerifLibre.variable} ${amiri.variable} antialiased bg-background`}
       >
-        {children}
+        <Header />
+        <main className="pt-[100px] pb-[150px]">
+          <WelcomeMessage />
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )

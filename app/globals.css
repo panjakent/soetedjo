@@ -4,10 +4,10 @@
 
 :root {
   --card-radius: 5px;
-  --background: #FFFFFF;
-  --foreground: #171717;
-  --primary: #000000;
-  --text-color: #000000;
+  --background: #ffffff;
+  --foreground: rgb(60, 60, 60);
+  --primary: #6c4204;
+  --text-color: #f30000;
   --border-color: #AFAFAF;
 }
 
@@ -37,3 +37,11 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+.card {
+  @apply border-[0.5px] border-borderColor rounded-[var(--card-radius)];
+}
+
+/*<div className="card italic text-center text-textColor border-[0.5px] border-borderColor rounded-[var(--card-radius)] px-8 py-8">*/
+
+
