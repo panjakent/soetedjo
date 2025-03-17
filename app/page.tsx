@@ -90,45 +90,6 @@ export default function Home() {
         </section>
 
         {/*tesssssss*/}
-        <section id="quote" className="px-3 mt-3">
-          <div className="italic text-center text-textColor border-[0.5px] border-borderColor rounded-[var(--card-radius)] px-6 py-8">
-            <p>
-              Setiap kenangan adalah cerita, setiap foto adalah jejak
-              perjalanan, dan setiap kisah yang terukir membentuk bagian dari
-              perjalanan kami.
-            </p>
-            <p className="mt-4">
-              Ingin tahu lebih dekat? Pilih menu di bawah dan temukan kisah di
-              balik jejak keluarga Soetedjo Oetojo.
-            </p>
-          </div>
-        </section>
-        <section id="quote" className="px-3 mt-3">
-          <div className="italic text-center text-textColor border-[0.5px] border-borderColor rounded-[var(--card-radius)] px-6 py-8">
-            <p>
-              Setiap kenangan adalah cerita, setiap foto adalah jejak
-              perjalanan, dan setiap kisah yang terukir membentuk bagian dari
-              perjalanan kami.
-            </p>
-            <p className="mt-4">
-              Ingin tahu lebih dekat? Pilih menu di bawah dan temukan kisah di
-              balik jejak keluarga Soetedjo Oetojo.
-            </p>
-          </div>
-        </section>
-        <section id="quote" className="px-3 mt-3">
-          <div className="italic text-center text-textColor border-[0.5px] border-borderColor rounded-[var(--card-radius)] px-6 py-8">
-            <p>
-              Setiap kenangan adalah cerita, setiap foto adalah jejak
-              perjalanan, dan setiap kisah yang terukir membentuk bagian dari
-              perjalanan kami.
-            </p>
-            <p className="mt-4">
-              Ingin tahu lebih dekat? Pilih menu di bawah dan temukan kisah di
-              balik jejak keluarga Soetedjo Oetojo.
-            </p>
-          </div>
-        </section>
         {/*tesssss*/}
 
         <nav id="menu-inside" className="grid grid-cols-2 gap-3 mt-3 px-3">
@@ -163,7 +124,7 @@ export default function Home() {
                   icon={menu.icon}
                   className="text-background text-[35px] transition duration-150 ease-in-out group-hover:text-textColor"
                 />
-                <span className="mt-1 text-[14px] font-bold text-background transition duration-150 ease-in-out group-hover:text-textColor">
+                <span className="mt-1 text-[14px] font-bold text-background transition duration-150 ease-in-out group-hover:text-textColor pb-4">
                   {menu.text}
                 </span>
               </a>
