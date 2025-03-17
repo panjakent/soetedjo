@@ -17,8 +17,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-        {/*/!*tessss*!/*/}
-        {/*/!*tessss*!/*/}
         <Menu />
       </main>
     </div>
