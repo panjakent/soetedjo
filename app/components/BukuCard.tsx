@@ -2,16 +2,8 @@ import Link from 'next/link'
 import { Buku } from '@/app/utils/types'
 import Image from 'next/image'
 
-interface BukuCardProps extends Buku {}
-
-export default function BukuCard({
-  id,
-  title,
-  author,
-  content,
-  cover,
-}: BukuCardProps) {
-  const truncatedContent = content.split(' ').slice(0, 13).join(' ') + '...'
+export default function BukuCard({ id, title, author, content, cover }: Buku) {
+  const truncatedContent = content.split(' ').slice(0, 11).join(' ') + '...'
 
   return (
     <div className="card flex gap-0 min-h-[190px]">

@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { Artikel } from '@/app/utils/types'
-import Image from 'next/image'
 
 interface ArtikelCardProps extends Artikel {
   cover?: string
@@ -11,7 +10,6 @@ export default function ArtikelCard({
   title,
   author,
   content,
-  cover,
 }: ArtikelCardProps) {
   const truncatedContent = content.split(' ').slice(0, 20).join(' ') + '...'
 
