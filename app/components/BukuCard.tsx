@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { Buku } from '@/app/utils/types'
 import Image from 'next/image'

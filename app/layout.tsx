@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
-import { Averia_Serif_Libre, Amiri } from 'next/font/google'
+import { Amiri, Averia_Serif_Libre } from 'next/font/google'
 import './globals.css'
-
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import WelcomeMessage from '@/app/components/WelcomeMessage'
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import { Suspense } from 'react'
 
 const averiaSerifLibre = Averia_Serif_Libre({
   variable: '--font-averia-serif-libre',
@@ -33,12 +34,16 @@ export default function RootLayout({
       <body
         className={`${averiaSerifLibre.variable} ${amiri.variable} antialiased`}
       >
-        <Header />
-        <main className="pt-[87px] pb-[80px]">
-          <WelcomeMessage />
-          {children}
-        </main>
-        <Footer />
+        <NuqsAdapter>
+          <Suspense>
+            <Header />
+            <main className="pt-[87px] pb-[80px]">
+              <WelcomeMessage />
+              {children}
+            </main>
+            <Footer />
+          </Suspense>
+        </NuqsAdapter>
       </body>
     </html>
   )
