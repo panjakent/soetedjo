@@ -1,6 +1,7 @@
 'use client'
 
 import { Icon } from '@iconify/react'
+import { motion } from 'motion/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -16,7 +17,16 @@ export default function Footer() {
   const pathname = usePathname()
 
   return (
-    <footer className="px-4 fixed bottom-0 inset-x-0 border-t border-borderColor bg-white/80 backdrop-blur-md z-10">
+    <motion.footer
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.6,
+        delay: 0.3,
+        ease: [0.6, -0.05, 0.1, 0.99],
+      }}
+      className="px-4 fixed bottom-0 inset-x-0 border-t border-borderColor bg-white/80 backdrop-blur-md z-10"
+    >
       <nav className="container mx-auto grid grid-cols-5">
         {FOOTER_MENU.map((menu) => {
           const isActive = pathname === menu.href
@@ -33,6 +43,6 @@ export default function Footer() {
           )
         })}
       </nav>
-    </footer>
+    </motion.footer>
   )
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import { Averia_Serif_Libre, Amiri } from 'next/font/google'
+import { Amiri, Averia_Serif_Libre } from 'next/font/google'
 import './globals.css'
-
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import WelcomeMessage from '@/app/components/WelcomeMessage'
