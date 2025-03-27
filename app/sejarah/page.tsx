@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { motion, useAnimate, useInView, Variants } from 'motion/react'
 
 const container: Variants = {
@@ -28,12 +28,6 @@ const item: Variants = {
 export default function Sejarah() {
   const [scope, animate] = useAnimate()
   const isInView = useInView(scope)
-
-  const [items, setItems] = useState([
-    { id: 1, text: 'Item 1' },
-    { id: 2, text: 'Item 2' },
-    { id: 3, text: 'Item 3' },
-  ])
 
   useEffect(() => {
     if (isInView) {

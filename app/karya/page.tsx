@@ -10,7 +10,7 @@ import { z } from 'zod'
 
 const container: Variants = {
   hidden: { opacity: 0 },
-  show: (custom: any) => ({
+  show: (custom: { delayChildren?: number }) => ({
     opacity: 1,
     transition: {
       delayChildren: custom?.delayChildren || 0,
