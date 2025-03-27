@@ -1,11 +1,12 @@
 'use client'
 
-import { useState } from 'react'
 import ArtikelCard from '@/app/components/ArtikelCard'
 import BukuCard from '@/app/components/BukuCard'
 import { ALL_DATA, CATEGORIES } from '@/app/utils/data'
 import { isArtikel, isBuku } from '@/app/utils/types'
 import { motion, Variants } from 'motion/react'
+import { parseAsJson, useQueryState } from 'nuqs'
+import { z } from 'zod'
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -30,8 +31,13 @@ const item: Variants = {
   },
 }
 
+const schema = z.array(z.string())
+
 export default function Karya() {
-  const [selectedFilters, setSelectedFilters] = useState<string[]>([])
+  const [selectedFilters, setSelectedFilters] = useQueryState(
+    'json',
+    parseAsJson(schema.parse).withDefault([])
+  )
 
   const toggleFilter = (category: string) => {
     setSelectedFilters((prev) =>

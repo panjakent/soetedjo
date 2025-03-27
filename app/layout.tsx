@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import WelcomeMessage from '@/app/components/WelcomeMessage'
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 const averiaSerifLibre = Averia_Serif_Libre({
   variable: '--font-averia-serif-libre',
@@ -32,12 +33,14 @@ export default function RootLayout({
       <body
         className={`${averiaSerifLibre.variable} ${amiri.variable} antialiased`}
       >
-        <Header />
-        <main className="pt-[87px] pb-[80px]">
-          <WelcomeMessage />
-          {children}
-        </main>
-        <Footer />
+        <NuqsAdapter>
+          <Header />
+          <main className="pt-[87px] pb-[80px]">
+            <WelcomeMessage />
+            {children}
+          </main>
+          <Footer />
+        </NuqsAdapter>
       </body>
     </html>
   )
