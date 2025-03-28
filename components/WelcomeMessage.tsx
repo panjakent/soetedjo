@@ -2,18 +2,17 @@
 
 import { motion } from 'motion/react'
 import { usePathname } from 'next/navigation'
-
-const pageNames: Record<string, string> = {
-  '/': 'Beranda',
-  '/sejarah': 'Sejarah',
-  '/karya': 'Karya',
-  '/galeri': 'Galeri',
-  '/acara': 'Acara',
-}
+import { useMemo } from 'react'
+import { LIST_MENU } from '@/contants/list-menu'
 
 export default function WelcomeMessage() {
   const pathname = usePathname()
-  const pageName = pageNames[pathname] || 'Beranda'
+  const pageName = useMemo(() => {
+    if (pathname === '/') {
+      return 'Beranda'
+    }
+    return LIST_MENU.find((menu) => menu.href === pathname)?.text
+  }, [pathname])
 
   return (
     <motion.section
@@ -28,7 +27,7 @@ export default function WelcomeMessage() {
     >
       <div className="card py-3 text-center">
         <p className="text-[20px] font-bold">
-          Selamat datang di{' '}
+          Selamat datang di menu{' '}
           <span className="text-primary underline decoration-1 underline-offset-[3px]">
             {pageName}
           </span>{' '}
