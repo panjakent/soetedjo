@@ -1,29 +1,8 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion, useAnimate, useInView, Variants } from 'motion/react'
-
-const container: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-}
-
-const item: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.6, -0.05, 0.1, 0.99],
-    },
-  },
-}
+import { motion, useAnimate, useInView } from 'motion/react'
+import { container, item } from '@/contants/framer-motion-variants'
 
 export default function Sejarah() {
   const [scope, animate] = useAnimate()
@@ -33,7 +12,7 @@ export default function Sejarah() {
     if (isInView) {
       animate(scope.current, { opacity: 1 })
     }
-  }, [isInView])
+  }, [isInView, scope, animate])
 
   return (
     <div className="container">

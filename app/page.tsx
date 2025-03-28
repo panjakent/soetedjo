@@ -1,30 +1,10 @@
 'use client'
 
-import Menu from '@/app/components/Menu'
-import { motion, Variants } from 'motion/react'
-
-const container: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-}
-
-const item: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.1,
-      duration: 0.6,
-      ease: [0.6, -0.05, 0.1, 0.99],
-    },
-  },
-}
+import Menu from '@/components/Menu'
+import { motion } from 'motion/react'
+import Image from 'next/image'
+import { container, item } from '@/contants/framer-motion-variants'
+import { PhotoProvider, PhotoView } from 'react-photo-view'
 
 export default function Home() {
   return (
@@ -33,7 +13,23 @@ export default function Home() {
       variants={container}
       initial="hidden"
       animate="show"
+      custom={{ delayChildren: 0.3 }}
     >
+      <motion.div id="image" variants={item} className="px-4 mt-2">
+        <div className="w-full h-full rounded-md overflow-hidden">
+          <PhotoProvider>
+            <PhotoView src="/assets/home-image.jpeg">
+              <Image
+                src="/assets/home-image.jpeg"
+                alt="home image"
+                width={200} // Lebar tetap
+                height={300} // Tinggi tetap, portrait
+                className="w-full h-full object-cover"
+              />
+            </PhotoView>
+          </PhotoProvider>
+        </div>
+      </motion.div>
       <motion.section id="quote" className="px-4 mt-2" variants={item}>
         <div className="card px-8 py-6 text-center italic text-[16px]">
           <p>

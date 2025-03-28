@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import { Amiri, Averia_Serif_Libre } from 'next/font/google'
 import './globals.css'
-import Header from '@/app/components/Header'
-import Footer from '@/app/components/Footer'
-import WelcomeMessage from '@/app/components/WelcomeMessage'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import WelcomeMessage from '@/components/WelcomeMessage'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { Suspense } from 'react'
+
+import 'react-photo-view/dist/react-photo-view.css'
 
 const averiaSerifLibre = Averia_Serif_Libre({
   variable: '--font-averia-serif-libre',
@@ -37,7 +39,7 @@ export default function RootLayout({
         <NuqsAdapter>
           <Suspense>
             <Header />
-            <main className="pt-[87px] pb-[80px]">
+            <main className="py-[87px]">
               <WelcomeMessage />
               {children}
             </main>
